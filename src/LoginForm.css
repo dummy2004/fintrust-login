@@ -1,0 +1,102 @@
+:root {
+  --brand:#003865;
+  --brand-600:#0056a3;
+  --card-bg:#111827;    
+  --card-text:#e5e7eb;  
+  --muted:#9ca3af;      
+  --input-bg:#1f2937;   
+  --input-bd:#374151;   
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+
+.login-container{
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--brand);
+}
+
+.login-card{
+  width: min(92vw, 410px);
+  background: var(--card-bg);
+  color: var(--card-text);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+
+.login-logo{
+  display:block;
+  width: 86px;
+  height: auto;
+  margin: 4px auto 12px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+.login-title{
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 6px 0 18px;
+  letter-spacing: .3px;
+}
+
+.login-form{ display: grid; gap: 14px; }
+
+.field{ display: grid; gap: 6px; }
+
+.label{
+  text-align: center;           
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.input{
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--input-bd);
+  border-radius: 10px;
+  background: var(--input-bg);
+  color: var(--card-text);
+  outline: none;
+  text-align: center;           
+  transition: border-color .2s, box-shadow .2s, transform .05s;
+}
+
+.input::placeholder{ color: #9aa4b2; }
+
+.input:focus{
+  border-color: var(--brand-600);
+  box-shadow: 0 0 0 3px rgba(0,86,163,.25);
+}
+
+.btn{
+  margin-top: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  cursor: pointer;
+  transition: transform .05s, background .2s, opacity .2s;
+}
+
+.btn:hover:enabled{ background: var(--brand-600); }
+.btn:active:enabled{ transform: translateY(1px); }
+.btn:disabled{
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.note{
+  margin-top: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+}
